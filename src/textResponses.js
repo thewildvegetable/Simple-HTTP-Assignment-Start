@@ -7,18 +7,18 @@ const getTimeString = () => {
 };
 
 const getHello = (request, response) => {
-  response.writehead(200, { 'Content-Type': 'text/plain' });
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
   response.write(hello);
   response.end();
 };
 
 const getTime = (request, response) => {
-  response.writehead(200, { 'Content-Type': 'text/plain' });
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
   response.write(getTimeString());
   response.end();
 };
 
 module.exports.hello = hello;
-module.exports.time = getTimeString;
+module.exports.getTimeString = getTimeString;
 module.exports.getHello = getHello;
 module.exports.getTime = getTime;
